@@ -186,7 +186,9 @@ export function renderOverview(props: OverviewProps) {
                 class="toggle-visibility-btn"
                 @click=${(e: Event) => {
                   const btn = e.currentTarget as HTMLButtonElement;
-                  const input = btn.previousElementSibling as HTMLInputElement;
+                  const container = btn.parentElement;
+                  const input = container?.querySelector('input') as HTMLInputElement | null;
+                  if (!input) return;
                   if (input.type === "password") {
                     input.type = "text";
                     btn.setAttribute("aria-label", "Hide token");
@@ -222,7 +224,9 @@ export function renderOverview(props: OverviewProps) {
                 class="toggle-visibility-btn"
                 @click=${(e: Event) => {
                   const btn = e.currentTarget as HTMLButtonElement;
-                  const input = btn.previousElementSibling as HTMLInputElement;
+                  const container = btn.parentElement;
+                  const input = container?.querySelector('input') as HTMLInputElement | null;
+                  if (!input) return;
                   if (input.type === "password") {
                     input.type = "text";
                     btn.setAttribute("aria-label", "Hide password");
@@ -257,7 +261,9 @@ export function renderOverview(props: OverviewProps) {
                 class="toggle-visibility-btn"
                 @click=${(e: Event) => {
                   const btn = e.currentTarget as HTMLButtonElement;
-                  const input = btn.previousElementSibling as HTMLInputElement;
+                  const container = btn.parentElement;
+                  const input = container?.querySelector('input') as HTMLInputElement | null;
+                  if (!input) return;
                   if (input.type === "password") {
                     input.type = "text";
                     btn.setAttribute("aria-label", "Hide session key");
