@@ -436,6 +436,65 @@
   font-weight: 500;
 }
 
+/* Input with toggle visibility button */
+.field-with-toggle .input-with-toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.field-with-toggle .input-with-toggle input {
+  flex: 1;
+  padding-right: 40px; /* Make room for the toggle button */
+}
+
+.toggle-visibility-btn {
+  position: absolute;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: 
+    color var(--duration-fast) ease,
+    background var(--duration-fast) ease;
+}
+
+.toggle-visibility-btn:hover {
+  color: var(--text);
+  background: var(--bg-hover);
+}
+
+.toggle-visibility-btn:active {
+  color: var(--text-strong);
+}
+
+.toggle-visibility-btn .icon-eye-off {
+  display: none;
+}
+
+.toggle-visibility-btn.visible .icon-eye {
+  display: none;
+}
+
+.toggle-visibility-btn.visible .icon-eye-off {
+  display: block;
+}
+
+.toggle-visibility-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+}
+
 .field input,
 .field textarea,
 .field select {
