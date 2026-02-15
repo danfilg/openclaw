@@ -462,7 +462,7 @@
   color: var(--muted);
   cursor: pointer;
   border-radius: var(--radius-sm);
-  transition: 
+  transition:
     color var(--duration-fast) ease,
     background var(--duration-fast) ease;
 }
